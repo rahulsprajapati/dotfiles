@@ -94,6 +94,9 @@ brew install rectangle
 echo "installing jetbrains-toolbox..."
 brew install jetbrains-toolbox
 
+echo "installing visual-studio-code..."
+brew install visual-studio-code
+
 echo "installing alfred..."
 brew install alfred
 
