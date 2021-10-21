@@ -88,6 +88,9 @@ brew install vlc
 echo "installing skitch..."
 brew install skitch
 
+echo "installing rectangle..."
+brew install rectangle
+
 echo "installing jetbrains-toolbox..."
 brew install jetbrains-toolbox
 
