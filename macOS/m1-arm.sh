@@ -73,7 +73,7 @@ echo "installing docker..."
 brew install docker
 
 echo "installing zoom..."
-brew install zoomus
+brew install zoom
 
 echo "installing whatsapp..."
 brew install whatsapp
