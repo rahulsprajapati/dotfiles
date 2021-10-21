@@ -52,52 +52,50 @@ brew install zsh
 echo "-- Brew cleanup.";
 brew cleanup
 
-echo "Installing brew cask ( UI ) packages..."
-
 echo "installing iterm2..."
-brew cask install iterm2
+brew install iterm2
 
 echo "installing sublime-text..."
-brew cask install sublime-text
+brew install sublime-text
 
 echo "installing google-chrome..."
-brew cask install google-chrome
+brew install google-chrome
 
 echo "installing firefox..."
-brew cask install firefox
+brew install firefox
 
 echo "installing 1password..."
-brew cask install 1password
+brew install 1password
 
 echo "installing slack..."
-brew cask install slack
+brew install slack
 
 echo "installing docker..."
-brew cask install docker
+brew install docker
 
 echo "installing zoom..."
-brew cask install zoomus
+brew install zoomus
 
 echo "installing whatsapp..."
-brew cask install whatsapp
+brew install whatsapp
 
 echo "installing sequel-pro..."
-brew cask install sequel-pro
+brew install sequel-pro
 
 echo "installing authy..."
-brew cask install authy
+brew install authy
 
 echo "installing vlc..."
-brew cask install vlc
+brew install vlc
 
 echo "installing skitch..."
-brew cask install skitch
+brew install skitch
 
 echo "installing jetbrains-toolbox..."
-brew cask install jetbrains-toolbox
+brew install jetbrains-toolbox
 
 echo "installing alfred..."
-brew cask install alfred
+brew install alfred
 
 ## Brew cleanup.
 echo "-- Brew cleanup.";
