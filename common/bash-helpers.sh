@@ -29,20 +29,6 @@ dns-cloudflare() {
 	networksetup -getdnsservers Wi-Fi;
 }
 
-# Start stubby for DoT DNS.
-dnssecure(){
-  sudo brew services start stubby
-  # cloudflare DoT
-  sudo /usr/local/sbin/stubby-setdns-macos.sh
-}
-
-# Stop stubby for DoT DNS.
-dnsunsecure(){
-  # set default DNS
-  sudo /usr/local/sbin/stubby-setdns-macos.sh -r
-  sudo brew services stop stubby
-}
-
 # Create random dummy file with random file size.
 dummyfile(){
 	if [ -n "$1" ] 
