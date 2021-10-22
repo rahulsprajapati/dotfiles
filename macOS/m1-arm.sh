@@ -3,10 +3,13 @@
 echo "Executing setup on native M1 ARM..."
 
 echo "Installing Homebrew..."
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Updating homebrew..."
-brew update
+brew update || echo "homebrew not found" && exit 1;
 
 echo "Installing brew packages..."
 
@@ -42,6 +45,9 @@ brew install yarn && yarn global add nodemon
 
 echo "installing bash-completion..."
 brew install bash-completion
+
+# Add the following line to your ~/.bash_profile:
+# [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 echo "installing zsh..."
 brew install zsh
@@ -108,9 +114,6 @@ brew cleanup
 
 echo "Installing nvm"
 brew install nvm
-source ~/.bashrc
-nvm --version
-nvm install --lts
 
 echo "Setting up zsh config..."
 RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -119,6 +122,9 @@ sed -i -e  's/plugins=(git)/plugins=(git colored-man-pages colorize pip python b
 cp "$PWD/common/bash-helpers.sh" ~/bash-helpers.sh
 echo "source ~/bash-helpers.sh" >> ~/.zshrc
 chsh -s $(which zsh)
+
+nvm --version
+nvm install --lts
 
 echo "Setting up github config"
 git config --global user.name "Rahul Prajapati"
