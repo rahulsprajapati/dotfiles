@@ -11,6 +11,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "Updating homebrew..."
 brew update || echo "homebrew not found" && exit 1;
 
+echo "Install rosetta..."
+softwareupdate --install-rosetta
+
 echo "Installing brew packages..."
 
 echo "installing wget..."
