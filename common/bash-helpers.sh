@@ -70,6 +70,28 @@ docker-cleanup() {
   docker network prune -f
 }
 
+# Add user to all sub sites.
+10up_add_multisite_user() {
+  USER_NAME=$1
+  ROLE=$2
+  DIR=$(pwd)
+
+  if [ -z "$USER_NAME" ] || [ -z "$ROLE" ]
+  then
+    echo "Please provide username and user role both, i.e 10up_add_multisite_user <username> <user_role>";
+    return;
+  fi
+
+  echo "Adding user $USER_NAME as $ROLE to all sites"
+  SITES=( $(cd $DIR && 10updocker wp site list --field=url --format=csv) )
+
+  for site in $SITES
+  do
+    echo "Adding user to $site"
+    10updocker wp user set-role $USER_NAME $ROLE --url=$site
+  done
+}
+
 # nvm config
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
