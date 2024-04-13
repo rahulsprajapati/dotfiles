@@ -133,7 +133,7 @@ brew install local
 echo "Setting up zsh config..."
 RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sed -i -e  's/robbyrussell/fino/g' ~/.zshrc
-sed -i -e  's/plugins=(git)/plugins=(git colored-man-pages colorize pip python brew osx z docker)/g' ~/.zshrc
+sed -i -e  's/plugins=(git)/plugins=(git colored-man-pages colorize pip python brew macos z docker)/g' ~/.zshrc
 cp "$PWD/common/bash-helpers.sh" ~/bash-helpers.sh
 echo "source ~/bash-helpers.sh" >> ~/.zshrc
 chsh -s $(which zsh)
