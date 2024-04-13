@@ -114,6 +114,9 @@ brew install pyenv
 echo "installing tunnelblick..."
 brew install --cask tunnelblick
 
+echo "installing stats..."
+brew install --cask stats
+
 #echo "Brew cleanup."
 echo "-- Brew cleanup."
 brew cleanup
