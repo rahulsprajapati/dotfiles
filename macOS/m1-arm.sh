@@ -111,6 +111,9 @@ brew install pyenv
 # pyenv global 2.7.18
 # pyenv global 3.11
 
+echo "installing google drive..."
+brew install google-drive
+
 echo "installing tunnelblick..."
 brew install --cask tunnelblick
 
@@ -123,6 +126,9 @@ brew cleanup
 
 echo "Installing nvm"
 brew install nvm
+
+echo "Installing local"
+brew install local
 
 echo "Setting up zsh config..."
 RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
