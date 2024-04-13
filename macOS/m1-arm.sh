@@ -52,8 +52,11 @@ brew install bash-completion
 # Add the following line to your ~/.bash_profile:
 # [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
-echo "installing zsh..."
+echo "Installing zsh..."
 brew install zsh
+
+echo "Installing gpg..."
+brew install gpg
 
 echo "-- Brew cleanup."
 brew cleanup
@@ -78,9 +81,6 @@ brew install 1password
 echo "installing slack..."
 brew install slack
 
-echo "installing docker..."
-brew install docker
-
 echo "installing zoom..."
 brew install zoom
 
@@ -90,9 +90,6 @@ brew install whatsapp
 echo "installing sequel-pro..."
 brew install sequel-pro
 
-echo "installing authy..."
-brew install authy
-
 echo "installing vlc..."
 brew install vlc
 
@@ -101,9 +98,6 @@ brew install skitch
 
 echo "installing rectangle..."
 brew install rectangle
-
-echo "installing jetbrains-toolbox..."
-brew install jetbrains-toolbox
 
 echo "installing visual-studio-code..."
 brew install visual-studio-code
@@ -199,6 +193,6 @@ vi ~/.ssh/id_rsa
 chmod 400 ~/.ssh/*
 
 echo "Download Licecap for gif screenshot."
-wget -qO ~/Downloads/licecap131.dmg https://www.cockos.com/licecap/licecap131.dmg
+wget -qO ~/Downloads/licecap132.dmg https://www.cockos.com/licecap/licecap132.dmg
 
 source ~/.zshrc
