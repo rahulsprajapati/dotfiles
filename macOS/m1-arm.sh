@@ -111,6 +111,9 @@ brew install pyenv
 # pyenv global 2.7.18
 # pyenv global 3.11
 
+echo "installing tunnelblick..."
+brew install --cask tunnelblick
+
 #echo "Brew cleanup."
 echo "-- Brew cleanup."
 brew cleanup
